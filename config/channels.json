@@ -1,0 +1,41 @@
+{
+  "auto_join": {
+    "enabled": true,
+    "channels": [
+      {
+        "name": "SILA AI MAIN",
+        "url": "https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28",
+        "jid": "120363422610520277@newsletter",
+        "auto_react": true,
+        "priority": 1
+      },
+      {
+        "name": "SILA AI STB",
+        "url": "https://whatsapp.com/channel/0029VbBG4gfISTkCpKxyMH02",
+        "jid": "120363402325089913@newsletter",
+        "auto_react": true,
+        "priority": 2
+      },
+      {
+        "name": "SILA LOGO",
+        "url": "https://whatsapp.com/channel/0029VbBmFT430LKO7Ch9C80X",
+        "jid": null,
+        "auto_react": false,
+        "priority": 3
+      }
+    ],
+    "check_interval": 3600000,
+    "max_retries": 3
+  },
+  "auto_reaction": {
+    "enabled": true,
+    "emojis": ["🐢", "❤️", "🔥", "⭐", "💫", "🚀", "👑", "🎯"],
+    "probability": 0.8,
+    "cooldown": 30000
+  },
+  "monitoring": {
+    "enabled": true,
+    "report_interval": 86400000,
+    "notify_owner": true
+  }
+}

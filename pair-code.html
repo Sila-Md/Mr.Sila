@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILA MD - WhatsApp Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .result.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .code-display {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px dashed #667eea;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .instructions h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .telegram-info {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .telegram-info a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .telegram-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #f44336;
+            display: none;
+        }
+        
+        .error.show {
+            display: block;
+            animation: shake 0.5s ease;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .code-display {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🐢</div>
+        <h1>SILA MD WhatsApp Bot</h1>
+        <p class="subtitle">Get pairing code for your WhatsApp number</p>
+        
+        <div class="form-group">
+            <label for="phoneNumber">WhatsApp Number (with country code)</label>
+            <input 
+                type="tel" 
+                id="phoneNumber" 
+                placeholder="+255612491554" 
+                value="+255"
+            >
+        </div>
+        
+        <button class="btn" onclick="getPairingCode()">Get Pairing Code</button>
+        
+        <div class="telegram-info">
+            <h3>📱 Telegram Method</h3>
+            <p>You can also get pairing code via Telegram:</p>
+            <p>1. Go to <a href="http://t.me/Sila_mini_bot" target="_blank">@Sila_mini_bot</a></p>
+            <p>2. Send: <code>/pair +YOUR_NUMBER</code></p>
+        </div>
+        
+        <div class="result" id="result">
+            <h2>🔐 Your Pairing Code</h2>
+            <div class="code-display" id="pairingCode"></div>
+            
+            <div class="instructions">
+                <h3>📋 How to Use:</h3>
+                <ol>
+                    <li>Open WhatsApp on your phone</li>
+                    <li>Go to Settings → Linked Devices → Link a Device</li>
+                    <li>Enter the 6-digit code shown above</li>
+                    <li>Wait for connection confirmation</li>
+                    <li>Start using SILA MD Bot! 🎉</li>
+                </ol>
+            </div>
+            
+            <p><strong>Note:</strong> This code expires in 5 minutes</p>
+        </div>
+        
+        <div class="error" id="error"></div>
+        
+        <div class="footer">
+            <p>© 2024 SILA TECH. All rights reserved.</p>
+            <p>Version 2.0.0 | Multi-Device WhatsApp Bot</p>
+            <p>Join our channel: <a href="https://whatsapp.com/channel/0029VbBG4gfISTkCpKxyMH02" target="_blank">SILA AI</a></p>
+        </div>
+    </div>
+    
+    <script>
+        function getPairingCode() {
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error');
+            const codeDisplay = document.getElementById('pairingCode');
+            
+            // Hide previous results
+            resultDiv.classList.remove('show');
+            errorDiv.classList.remove('show');
+            
+            // Validate phone number
+            if (!phoneNumber || phoneNumber.length < 10) {
+                showError('Please enter a valid WhatsApp number with country code');
+                return;
+            }
+            
+            // Show loading
+            codeDisplay.textContent = 'Loading...';
+            
+            // Make API request
+            fetch(`/code?number=${encodeURIComponent(phoneNumber)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'pairing_code_sent' && data.code) {
+                        codeDisplay.textContent = data.code;
+                        resultDiv.classList.add('show');
+                        
+                        // Auto-copy to clipboard
+                        navigator.clipboard.writeText(data.code).then(() => {
+                            console.log('Code copied to clipboard');
+                        }).catch(err => {
+                            console.log('Failed to copy: ', err);
+                        });
+                        
+                    } else if (data.status === 'already_connected') {
+                        showError('This number is already connected to a bot session.');
+                    } else if (data.status === 'error') {
+                        showError(data.message || 'Failed to generate pairing code. Please try again.');
+                    } else {
+                        showError('Unexpected response from server.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showError('Network error. Please check your connection and try again.');
+                });
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+        
+        // Auto-focus on input
+        document.getElementById('phoneNumber').focus();
+        
+        // Allow pressing Enter to submit
+        document.getElementById('phoneNumber').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                getPairingCode();
+            }
+        });
+    </script>
+</body>
+</html>

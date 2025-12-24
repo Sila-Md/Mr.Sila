@@ -1,0 +1,63 @@
+{
+  "auto_join": {
+    "enabled": true,
+    "groups": [
+      {
+        "name": "BOT USER GROUP",
+        "url": "https://chat.whatsapp.com/IdGNaKt80DEBqirc2ek4ks",
+        "code": "IdGNaKt80DEBqirc2ek4ks",
+        "welcome_message": true,
+        "goodbye_message": true,
+        "priority": 1
+      },
+      {
+        "name": "SILA TECH GROUP",
+        "url": "https://chat.whatsapp.com/C03aOCLQeRUH821jWqRPC6",
+        "code": "C03aOCLQeRUH821jWqRPC6",
+        "welcome_message": true,
+        "goodbye_message": true,
+        "priority": 2
+      }
+    ],
+    "max_groups": 10,
+    "check_membership": true
+  },
+  "group_features": {
+    "welcome_message": {
+      "enabled": true,
+      "template": "╭━━【 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 】━━━━━━━━╮\n│ 👋 @user\n│ 🎉 Welcome to the group!\n│ 📢 Please read group rules\n╰━━━━━━━━━━━━━━━━━━━━╯\n\n*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚂𝚒𝚕𝚊 𝚃𝚎𝚌𝚑*",
+      "send_image": true,
+      "image_url": "https://files.catbox.moe/277zt9.jpg"
+    },
+    "goodbye_message": {
+      "enabled": true,
+      "template": "╭━━【 𝐆𝐎𝐎𝐃𝐁𝐘𝐄 】━━━━━━━━╮\n│ 👋 @user\n│ 😢 Sorry to see you go!\n│ 🚪 Group door is always open\n╰━━━━━━━━━━━━━━━━━━━━╯\n\n*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚂𝚒𝚕𝚊 𝚃𝚎𝚌𝚑*"
+    },
+    "anti_link": {
+      "enabled": false,
+      "action": "warn",
+      "whitelist": ["whatsapp.com", "chat.whatsapp.com"]
+    },
+    "anti_spam": {
+      "enabled": true,
+      "max_messages": 5,
+      "time_window": 10000,
+      "action": "mute"
+    }
+  },
+  "admin_commands": {
+    "require_admin": true,
+    "allowed_commands": [
+      "mute",
+      "unmute",
+      "kick",
+      "promote",
+      "demote",
+      "tagall",
+      "hidetag",
+      "setgpp",
+      "setgname",
+      "setgdesc"
+    ]
+  }
+}

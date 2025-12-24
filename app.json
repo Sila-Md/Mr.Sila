@@ -1,0 +1,39 @@
+{
+  "name": "SILA MD WhatsApp Bot",
+  "description": "Multi-device WhatsApp Bot with Telegram Integration by SILA TECH",
+  "repository": "https://github.com/SILA/SILA-MD-s1",
+  "logo": "https://files.catbox.moe/277zt9.jpg",
+  "keywords": ["whatsapp", "bot", "multi-device", "baileys", "telegram", "sila"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NPM_CONFIG_LEGACY_PEER_DEPS": {
+      "description": "Fix npm peer dependency conflicts",
+      "value": "true"
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection string",
+      "value": "mongodb+srv://kaviduinduwara:kavidu2008@cluster0.bqmspdf.mongodb.net/soloBot?retryWrites=true&w=majority&appName=Cluster0"
+    },
+    "TELEGRAM_TOKEN": {
+      "description": "Telegram bot token",
+      "value": "8526421940:AAFU39FEU61U3ORKIe8NuqzBACydzqcOgSI"
+    },
+    "TELEGRAM_USER_ID": {
+      "description": "Telegram user ID for admin",
+      "value": "7303596375"
+    },
+    "APP_URL": {
+      "description": "Your app URL (for pairing)",
+      "value": "https://YOUR_APP_NAME.herokuapp.com"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  }
+}

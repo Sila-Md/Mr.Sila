@@ -1,0 +1,361 @@
+{
+  "categories": {
+    "downloaders": {
+      "name": "Downloaders",
+      "description": "Commands for downloading media",
+      "commands": [
+        {
+          "name": "song",
+          "aliases": ["play", "mp3", "audio", "music"],
+          "description": "Download audio from YouTube",
+          "usage": ".song <song name>",
+          "example": ".song shape of you",
+          "category": "downloaders",
+          "cooldown": 10,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "video",
+          "aliases": ["ytmp4", "mp4", "ytv"],
+          "description": "Download video from YouTube",
+          "usage": ".video <video name>",
+          "example": ".video tutorial",
+          "category": "downloaders",
+          "cooldown": 15,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "fb",
+          "aliases": ["facebook"],
+          "description": "Download Facebook video",
+          "usage": ".fb <facebook url>",
+          "example": ".fb https://facebook.com/...",
+          "category": "downloaders",
+          "cooldown": 15,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "ig",
+          "aliases": ["instagram"],
+          "description": "Download Instagram content",
+          "usage": ".ig <instagram url>",
+          "example": ".ig https://instagram.com/p/...",
+          "category": "downloaders",
+          "cooldown": 15,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "tiktok",
+          "aliases": [],
+          "description": "Download TikTok video",
+          "usage": ".tiktok <tiktok url>",
+          "example": ".tiktok https://vm.tiktok.com/...",
+          "category": "downloaders",
+          "cooldown": 15,
+          "premium": false,
+          "enabled": true
+        }
+      ]
+    },
+    "group": {
+      "name": "Group",
+      "description": "Group management commands",
+      "commands": [
+        {
+          "name": "mute",
+          "aliases": [],
+          "description": "Mute group (admins only)",
+          "usage": ".mute",
+          "example": ".mute",
+          "category": "group",
+          "cooldown": 5,
+          "admin_only": true,
+          "enabled": true
+        },
+        {
+          "name": "unmute",
+          "aliases": [],
+          "description": "Unmute group (admins only)",
+          "usage": ".unmute",
+          "example": ".unmute",
+          "category": "group",
+          "cooldown": 5,
+          "admin_only": true,
+          "enabled": true
+        },
+        {
+          "name": "kick",
+          "aliases": [],
+          "description": "Kick user from group (admins only)",
+          "usage": ".kick @user",
+          "example": ".kick @john",
+          "category": "group",
+          "cooldown": 10,
+          "admin_only": true,
+          "enabled": true
+        },
+        {
+          "name": "tagall",
+          "aliases": ["tag", "hidetag"],
+          "description": "Mention all group members",
+          "usage": ".tagall <message>",
+          "example": ".tagall Meeting time!",
+          "category": "group",
+          "cooldown": 30,
+          "admin_only": true,
+          "enabled": true
+        },
+        {
+          "name": "ginfo",
+          "aliases": ["groupinfo"],
+          "description": "Get group information",
+          "usage": ".ginfo",
+          "example": ".ginfo",
+          "category": "group",
+          "cooldown": 5,
+          "admin_only": false,
+          "enabled": true
+        }
+      ]
+    },
+    "ai": {
+      "name": "AI",
+      "description": "Artificial Intelligence commands",
+      "commands": [
+        {
+          "name": "imagine",
+          "aliases": ["aiimg", "flux", "aiimage"],
+          "description": "Generate AI image from text",
+          "usage": ".imagine <prompt>",
+          "example": ".imagine sunset over mountains",
+          "category": "ai",
+          "cooldown": 30,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "sora",
+          "aliases": ["aivideo", "videogen", "text2video"],
+          "description": "Generate AI video from text",
+          "usage": ".sora <prompt>",
+          "example": ".sora cat playing piano",
+          "category": "ai",
+          "cooldown": 120,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "openai",
+          "aliases": ["chatgpt", "gpt"],
+          "description": "Chat with OpenAI",
+          "usage": ".openai <message>",
+          "example": ".openai Hello",
+          "category": "ai",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "deepseek",
+          "aliases": ["deep", "seekai"],
+          "description": "Chat with DeepSeek AI",
+          "usage": ".deepseek <message>",
+          "example": ".deepseek How are you?",
+          "category": "ai",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        }
+      ]
+    },
+    "tools": {
+      "name": "Tools",
+      "description": "Utility tools and functions",
+      "commands": [
+        {
+          "name": "ping",
+          "aliases": ["p"],
+          "description": "Check bot response time",
+          "usage": ".ping",
+          "example": ".ping",
+          "category": "tools",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "pair",
+          "aliases": [],
+          "description": "Get WhatsApp pairing code",
+          "usage": ".pair <number>",
+          "example": ".pair +255612491554",
+          "category": "tools",
+          "cooldown": 60,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "tts",
+          "aliases": ["say", "speak"],
+          "description": "Convert text to speech",
+          "usage": ".tts <text>",
+          "example": ".tts Hello world",
+          "category": "tools",
+          "cooldown": 10,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "textmaker",
+          "aliases": ["text", "textgen", "styletext"],
+          "description": "Create stylish text images",
+          "usage": ".textmaker <style> <text>",
+          "example": ".textmaker metallic SILA",
+          "category": "tools",
+          "cooldown": 10,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "sticker",
+          "aliases": ["s"],
+          "description": "Convert image/video to sticker",
+          "usage": ".sticker (reply to image/video)",
+          "example": "Reply .sticker to image",
+          "category": "tools",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        }
+      ]
+    },
+    "system": {
+      "name": "System",
+      "description": "Bot system commands",
+      "commands": [
+        {
+          "name": "menu",
+          "aliases": ["help", "cmd"],
+          "description": "Show all commands",
+          "usage": ".menu",
+          "example": ".menu",
+          "category": "system",
+          "cooldown": 10,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "alive",
+          "aliases": ["bot", "sila"],
+          "description": "Check if bot is alive",
+          "usage": ".alive",
+          "example": ".alive",
+          "category": "system",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "uptime",
+          "aliases": ["runtime"],
+          "description": "Check bot uptime",
+          "usage": ".uptime",
+          "example": ".uptime",
+          "category": "system",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "owner",
+          "aliases": [],
+          "description": "Show bot owner info",
+          "usage": ".owner",
+          "example": ".owner",
+          "category": "system",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        },
+        {
+          "name": "url",
+          "aliases": [],
+          "description": "Get bot URL",
+          "usage": ".url",
+          "example": ".url",
+          "category": "system",
+          "cooldown": 5,
+          "premium": false,
+          "enabled": true
+        }
+      ]
+    },
+    "owner": {
+      "name": "Owner",
+      "description": "Bot owner commands",
+      "commands": [
+        {
+          "name": "broadcast",
+          "aliases": ["bc"],
+          "description": "Broadcast message to all users",
+          "usage": ".broadcast <message>",
+          "example": ".broadcast Hello everyone!",
+          "category": "owner",
+          "cooldown": 300,
+          "owner_only": true,
+          "enabled": true
+        },
+        {
+          "name": "settings",
+          "aliases": ["setting", "set"],
+          "description": "Bot settings panel",
+          "usage": ".settings",
+          "example": ".settings",
+          "category": "owner",
+          "cooldown": 5,
+          "owner_only": true,
+          "enabled": true
+        },
+        {
+          "name": "restart",
+          "aliases": [],
+          "description": "Restart the bot",
+          "usage": ".restart",
+          "example": ".restart",
+          "category": "owner",
+          "cooldown": 60,
+          "owner_only": true,
+          "enabled": true
+        },
+        {
+          "name": "update",
+          "aliases": [],
+          "description": "Update the bot",
+          "usage": ".update",
+          "example": ".update",
+          "category": "owner",
+          "cooldown": 300,
+          "owner_only": true,
+          "enabled": true
+        },
+        {
+          "name": "bot",
+          "aliases": [],
+          "description": "Turn bot on/off",
+          "usage": ".bot on/off",
+          "example": ".bot on",
+          "category": "owner",
+          "cooldown": 10,
+          "owner_only": true,
+          "enabled": true
+        }
+      ]
+    }
+  },
+  "command_stats": {},
+  "last_updated": null
+}

@@ -1,0 +1,133 @@
+{
+  "bot": {
+    "start_time": null,
+    "total_uptime": 0,
+    "restart_count": 0,
+    "last_restart": null,
+    "version": "2.0.0",
+    "status": "offline"
+  },
+  "performance": {
+    "average_response_time": 0,
+    "total_requests": 0,
+    "failed_requests": 0,
+    "success_rate": 100,
+    "peak_concurrent_users": 0,
+    "memory_usage": {
+      "current": 0,
+      "average": 0,
+      "peak": 0
+    },
+    "cpu_usage": {
+      "current": 0,
+      "average": 0,
+      "peak": 0
+    }
+  },
+  "users": {
+    "total_registered": 0,
+    "active_today": 0,
+    "active_this_week": 0,
+    "active_this_month": 0,
+    "new_users_today": 0,
+    "new_users_this_week": 0,
+    "new_users_this_month": 0,
+    "countries": {},
+    "devices": {}
+  },
+  "messages": {
+    "total_received": 0,
+    "total_sent": 0,
+    "today_received": 0,
+    "today_sent": 0,
+    "average_daily": 0,
+    "message_types": {
+      "text": 0,
+      "image": 0,
+      "video": 0,
+      "audio": 0,
+      "document": 0,
+      "sticker": 0
+    }
+  },
+  "commands": {
+    "total_executed": 0,
+    "today_executed": 0,
+    "popular_commands": {},
+    "category_usage": {
+      "downloaders": 0,
+      "group": 0,
+      "ai": 0,
+      "tools": 0,
+      "system": 0,
+      "owner": 0
+    },
+    "success_rate": 100,
+    "average_execution_time": 0
+  },
+  "downloads": {
+    "total_downloads": 0,
+    "today_downloads": 0,
+    "by_type": {
+      "youtube": 0,
+      "facebook": 0,
+      "instagram": 0,
+      "tiktok": 0,
+      "other": 0
+    },
+    "total_size": 0,
+    "average_size": 0
+  },
+  "groups": {
+    "total_groups": 0,
+    "active_groups": 0,
+    "largest_group": {
+      "id": null,
+      "name": null,
+      "members": 0
+    },
+    "group_events": {
+      "joins": 0,
+      "leaves": 0,
+      "promotions": 0,
+      "demotions": 0
+    }
+  },
+  "telegram": {
+    "total_users": 0,
+    "pair_codes_generated": 0,
+    "successful_pairings": 0,
+    "active_sessions": 0
+  },
+  "errors": {
+    "total_errors": 0,
+    "today_errors": 0,
+    "error_types": {},
+    "last_error": null,
+    "recovery_rate": 100
+  },
+  "api_usage": {
+    "total_api_calls": 0,
+    "successful_calls": 0,
+    "failed_calls": 0,
+    "by_service": {
+      "youtube": 0,
+      "facebook": 0,
+      "instagram": 0,
+      "tiktok": 0,
+      "ai_image": 0,
+      "ai_text": 0,
+      "other": 0
+    }
+  },
+  "timestamps": {
+    "created": null,
+    "last_updated": null,
+    "last_backup": null,
+    "last_cleanup": null,
+    "last_report": null
+  },
+  "daily_stats": {},
+  "weekly_stats": {},
+  "monthly_stats": {}
+}

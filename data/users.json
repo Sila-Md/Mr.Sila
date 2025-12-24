@@ -1,0 +1,15 @@
+{
+  "statistics": {
+    "total_users": 0,
+    "active_users": 0,
+    "banned_users": 0,
+    "premium_users": 0,
+    "total_messages": 0,
+    "total_commands": 0,
+    "last_updated": null
+  },
+  "user_profiles": {},
+  "user_preferences": {},
+  "user_stats": {},
+  "backup_history": []
+}

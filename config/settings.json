@@ -1,0 +1,145 @@
+{
+  "bot": {
+    "name": "SILA MD",
+    "version": "2.0.0",
+    "prefix": ".",
+    "owners": ["255612491554", "255789661031"],
+    "language": "en",
+    "timezone": "Africa/Dar_es_Salaam",
+    "max_file_size": 104857600,
+    "session_timeout": 86400000
+  },
+  "features": {
+    "auto_reply": {
+      "enabled": true,
+      "responses": {
+        "hi": "𝙷𝚎𝚕𝚕𝚘! 👋 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚑𝚎𝚕𝚙 𝚢𝚘𝚞 𝚝𝚘𝚍𝚊𝚢?",
+        "mambo": "𝙿𝚘𝚊 𝚜𝚊𝚗𝚊! 👋 𝙽𝚒𝚔𝚞𝚜𝚊𝚒𝚍𝚒𝚎 𝙺𝚞𝚑𝚞𝚜𝚞?",
+        "hey": "𝙷𝚎𝚢 𝚝𝚑𝚎𝚛𝚎! 😊 𝚄𝚜𝚎 .𝚖𝚎𝚗𝚞 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜.",
+        "menu": "𝚃𝚢𝚙𝚎 .𝚖𝚎𝚗𝚞 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜! 📜"
+      }
+    },
+    "auto_bio": {
+      "enabled": true,
+      "bios": [
+        "🐢 SILA-MD-MINI | By SILA",
+        "🤖 WhatsApp Bot | SILA TECH",
+        "🚀 Powerful Features | SILA MD",
+        "💫 Always Online | SILA BOT",
+        "🎯 Fast & Reliable | SILA-MINI"
+      ],
+      "change_interval": 30000
+    },
+    "status_handler": {
+      "auto_view": true,
+      "auto_like": true,
+      "like_emojis": ["❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "🤎"],
+      "cooldown": 1000
+    },
+    "message_handler": {
+      "auto_read": false,
+      "auto_typing": true,
+      "auto_recording": true,
+      "presence_update": true
+    }
+  },
+  "apis": {
+    "youtube": {
+      "primary": "https://api.nekolabs.my.id/downloader/youtube/play/v1",
+      "fallback": "https://sadiya-tech-apis.vercel.app/download/ytdl",
+      "timeout": 30000
+    },
+    "facebook": {
+      "url": "https://api.siputzx.my.id/api/d/facebook",
+      "timeout": 30000
+    },
+    "instagram": {
+      "url": "https://delirius-apiofc.vercel.app/download/igv2",
+      "timeout": 30000
+    },
+    "tiktok": {
+      "url": "https://delirius-apiofc.vercel.app/download/tiktok",
+      "timeout": 30000
+    },
+    "ai_image": {
+      "flux": "https://api.siputzx.my.id/api/ai/flux",
+      "stable_diffusion": "https://api.siputzx.my.id/api/ai/stable-diffusion",
+      "stability_ai": "https://api.siputzx.my.id/api/ai/stabilityai",
+      "timeout": 30000
+    },
+    "ai_text": {
+      "openai": "https://vapis.my.id/api/openai",
+      "deepseek": "https://api.ryzendesu.vip/api/ai/deepseek",
+      "gpt": "https://lance-frank-asta.onrender.com/api/gpt",
+      "timeout": 30000
+    },
+    "textmaker": {
+      "url": "https://api.bk9.dev/textmaker",
+      "styles": {
+        "metallic": "3D Metal Text",
+        "ice": "Ice Text Effect",
+        "snow": "Snow 3D Text",
+        "impressive": "Colorful Paint Text",
+        "matrix": "Matrix Text Effect",
+        "light": "Futuristic Light Text",
+        "neon": "Colorful Neon Lights",
+        "devil": "Neon Devil Wings",
+        "purple": "Purple Text Effect",
+        "thunder": "Thunder Text Effect",
+        "leaves": "Green Brush Text",
+        "1917": "1917 Style Text",
+        "arena": "Arena of Valor Cover",
+        "hacker": "Anonymous Hacker",
+        "sand": "Text on Sand",
+        "blackpink": "Blackpink Style",
+        "glitch": "Digital Glitch Text",
+        "fire": "Flame Lettering"
+      }
+    },
+    "sora": {
+      "url": "https://okatsu-rolezapiiz.vercel.app/ai/txt2video",
+      "timeout": 120000
+    },
+    "apk": {
+      "aptoide": "http://ws75.aptoide.com/api/7/apps/search",
+      "download": "https://api.bk9.dev/download/apk",
+      "timeout": 30000
+    }
+  },
+  "telegram": {
+    "enabled": true,
+    "token": "8526421940:AAFU39FEU61U3ORKIe8NuqzBACydzqcOgSI",
+    "user_id": "7303596375",
+    "username": "Sila_mini_bot",
+    "pair_command": "/pair",
+    "help_command": "/help"
+  },
+  "security": {
+    "max_login_attempts": 3,
+    "session_encryption": true,
+    "rate_limit": {
+      "enabled": true,
+      "max_requests": 50,
+      "time_window": 60000
+    },
+    "blacklist": {
+      "enabled": true,
+      "auto_ban": false,
+      "notify_owner": true
+    }
+  },
+  "performance": {
+    "max_concurrent_downloads": 3,
+    "cache_enabled": true,
+    "cache_ttl": 3600000,
+    "cleanup_interval": 3600000,
+    "log_retention_days": 7
+  },
+  "notifications": {
+    "connection_alerts": true,
+    "error_alerts": true,
+    "new_user_alerts": true,
+    "daily_report": true,
+    "report_time": "09:00"
+  }
+}
