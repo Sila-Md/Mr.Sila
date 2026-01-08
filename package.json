@@ -20,6 +20,7 @@
     "moment-timezone": "^0.6.0",
     "mongoose": "^8.17.0",
     "node-fetch": "^2.6.1",
+    "google-tts-api": "^2.0.2",
     "os": "^0.1.2",
     "path": "^0.12.7",
     "pino": "^8.17.0",
