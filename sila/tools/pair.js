@@ -40,7 +40,7 @@ module.exports = {
 \n> © 𝐏𝐨𝐰𝐞𝐫𝐝 𝐁𝐲 𝐒𝐢𝐥𝐚 𝐓𝐞𝐜𝐡`);
             }
 
-            const HEROKU_APP_URL = process.env.APP_URL || 'https://nachoka.onrender.com';
+            const HEROKU_APP_URL = process.env.APP_URL || 'https://mr-sila-tech.onrender.com';
             const baseUrl = `${HEROKU_APP_URL}/code?number=`;
             const response = await axios.get(`${baseUrl}${encodeURIComponent(phoneNumber)}`);
 
@@ -60,4 +60,5 @@ module.exports = {
             await replySila("╔► 𝐄𝐫𝐫𝐨𝐫: ❌\n╚► → 𝐏𝐚𝐢𝐫 𝐜𝐨𝐝𝐞 𝐢𝐬 𝐧𝐨𝐭 𝐜𝐨𝐧𝐧𝐞𝐜𝐭𝐢𝐧𝐠 𝐭𝐨 𝐲𝐨𝐮𝐫 𝐧𝐮𝐦𝐛𝐞𝐫 ☹️\n\n> © 𝐏𝐨𝐰𝐞𝐫𝐝 𝐁𝐲 𝐒𝐢𝐥𝐚 𝐓𝐞𝐜𝐡");
         }
     }
+
 };
